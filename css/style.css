@@ -4,10 +4,6 @@ body {
   background-color: #34364a;
 }
 
-a {
-  text-decoration: none;
-}
-
 /* Header */
 
 header {
@@ -25,13 +21,16 @@ main .container-custom {
   margin: 0 auto;
 }
 
+main .disc-box {
+  width: calc(100% / 5);
+}
+
 main .single-album {
   border: 1px solid transparent;
-  width: 170px;
   height: 320px;
+  width: 170px;
   background-color: #2a2c42;
-  width: calc(100% / 5 - 30px);
-  margin: 20px 15px;
+  margin: 20px 0;
 }
 
 main .single-album:hover {
@@ -39,5 +38,6 @@ main .single-album:hover {
 }
 
 main img {
-  width: 100px;
+  width: 120px;
+  cursor: pointer;
 }

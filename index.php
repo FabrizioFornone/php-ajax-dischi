@@ -1,7 +1,6 @@
 <?php
 
 /*
-
 Stampare a schermo una decina di dischi musicali (vedi screenshot).
 Utilizzare:
 Html, CSS, VueJS, axios, PHP
@@ -11,9 +10,11 @@ Seconda Milestone:
 Attraverso l’utilizzo di axios: al caricamento della pagina axios chiederà, attraverso una chiamata api, i dischi a php e li stamperà attraverso vue.
 Bonus:
 Attraverso un’altra chiamata api, filtrare gli album per genere
-
-
 */
+
+include __DIR__ . "/db/db.php";
+
+
 
 ?>
 
@@ -44,98 +45,29 @@ Attraverso un’altra chiamata api, filtrare gli album per genere
         <div class="container-custom my-4">
             <div class="d-flex flex-wrap text-center">
                 <!-- Album -->
-                <div class="single-album py-2">
-                    <a href="#">
-                        <img class="py-1" src="./img/logo-small.svg" alt="" />
-                        <div class="py-1 fs-4 fw-bold text-white">title</div>
-                        <div class="text-secondary">author</div>
-                        <div class="text-secondary">year</div>
-                    </a>
-                </div>
-                <!-- Album -->
-                <div class="single-album py-2">
-                    <a href="#">
-                        <img class="py-1" src="./img/logo-small.svg" alt="" />
-                        <div class="py-1 fs-4 fw-bold text-white">title</div>
-                        <div class="text-secondary">author</div>
-                        <div class="text-secondary">year</div>
-                    </a>
-                </div>
-                <!-- Album -->
-                <div class="single-album py-2">
-                    <a href="#">
-                        <img class="py-1" src="./img/logo-small.svg" alt="" />
-                        <div class="py-1 fs-4 fw-bold text-white">title</div>
-                        <div class="text-secondary">author</div>
-                        <div class="text-secondary">year</div>
-                    </a>
-                </div>
-                <!-- Album -->
-                <div class="single-album py-2">
-                    <a href="#">
-                        <img class="py-1" src="./img/logo-small.svg" alt="" />
-                        <div class="py-1 fs-4 fw-bold text-white">title</div>
-                        <div class="text-secondary">author</div>
-                        <div class="text-secondary">year</div>
-                    </a>
-                </div>
-                <!-- Album -->
-                <div class="single-album py-2">
-                    <a href="#">
-                        <img class="py-1" src="./img/logo-small.svg" alt="" />
-                        <div class="py-1 fs-4 fw-bold text-white">title</div>
-                        <div class="text-secondary">author</div>
-                        <div class="text-secondary">year</div>
-                    </a>
-                </div>
-                <!-- Album -->
-                <div class="single-album py-2">
-                    <a href="#">
-                        <img class="py-1" src="./img/logo-small.svg" alt="" />
-                        <div class="py-1 fs-4 fw-bold text-white">title</div>
-                        <div class="text-secondary">author</div>
-                        <div class="text-secondary">year</div>
-                    </a>
-                </div>
-                <!-- Album -->
-                <div class="single-album py-2">
-                    <a href="#">
-                        <img class="py-1" src="./img/logo-small.svg" alt="" />
-                        <div class="py-1 fs-4 fw-bold text-white">title</div>
-                        <div class="text-secondary">author</div>
-                        <div class="text-secondary">year</div>
-                    </a>
-                </div>
-                <!-- Album -->
-                <div class="single-album py-2">
-                    <a href="#">
-                        <img class="py-1" src="./img/logo-small.svg" alt="" />
-                        <div class="py-1 fs-4 fw-bold text-white">title</div>
-                        <div class="text-secondary">author</div>
-                        <div class="text-secondary">year</div>
-                    </a>
-                </div>
-                <!-- Album -->
-                <div class="single-album py-2">
-                    <a href="#">
-                        <img class="py-1" src="./img/logo-small.svg" alt="" />
-                        <div class="py-1 fs-4 fw-bold text-white">title</div>
-                        <div class="text-secondary">author</div>
-                        <div class="text-secondary">year</div>
-                    </a>
-                </div>
-                <!-- Album -->
-                <div class="single-album py-2">
-                    <a href="#">
-                        <img class="py-1" src="./img/logo-small.svg" alt="" />
-                        <div class="py-1 fs-4 fw-bold text-white">title</div>
-                        <div class="text-secondary">author</div>
-                        <div class="text-secondary">year</div>
-                    </a>
-                </div>
+                <?php
+                foreach ($db as $disc) {
+                    $discImg = $disc['poster'];
+                ?>
+                    <div class="disc-box">
+
+                        <div class='single-album py-2'>;
+
+                            <img class="py-1" src="<?php echo $discImg ?> " alt="">
+                            <div class="py-1 fs-4 fw-bold text-white"><?php echo $disc['title'] ?></div>
+                            <div class="text-secondary"><?php echo $disc['author'] ?></div>
+                            <div class="text-secondary"><?php echo $disc['year'] ?></div>
+
+                        </div>;
+                    </div>
+                <?php
+                }
+                ?>
             </div>
         </div>
     </main>
+
+
 
 </body>
 
