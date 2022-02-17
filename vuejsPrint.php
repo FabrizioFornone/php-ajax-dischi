@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,8 +22,31 @@
     </header>
     <main>
         <!-- Container -->
+        <div id="app">
+            <div class="container-custom my-4">
 
+                <div class="d-flex flex-wrap text-center">
+
+                    <div v-for="disc in discList" class="disc-box">
+
+                        <div class='single-album py-2'>;
+
+                            <img class="py-1" :src="disc.poster" alt="">
+                            <div class="py-1 fs-4 fw-bold text-white">{{disc.title}}</div>
+                            <div class="text-secondary">{{disc.author}}</div>
+                            <div class="text-secondary">{{disc.year}}</div>
+
+                        </div>;
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
     </main>
+
+    <script src="./js/script.js"></script>
 
 </body>
 
