@@ -1,0 +1,42 @@
+/* Utility Classes */
+
+body {
+  background-color: #34364a;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header */
+
+header {
+  background-color: #0d1028;
+}
+
+header img {
+  width: 30px;
+}
+
+/* Main */
+
+main .container-custom {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+main .single-album {
+  border: 1px solid transparent;
+  width: 170px;
+  height: 320px;
+  background-color: $bg-dark-color;
+  width: calc(100% / 5);
+}
+
+main .single-album:hover {
+  border: 1px solid #ccc;
+}
+
+main img {
+  width: 130px;
+}
