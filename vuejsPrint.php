@@ -13,16 +13,27 @@
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
-        <div class="mx-3 py-2">
-            <!-- Logo -->
-            <img src="./img/logo-small.svg" alt="" />
-        </div>
-    </header>
-    <main>
-        <!-- Container -->
-        <div id="app">
+    <div id="app">
+        <!-- Header -->
+        <header>
+            <div class="d-flex align-items-center py-2">
+                <div class="mx-3">
+                    <!-- Logo -->
+                    <img src="./img/logo-small.svg" alt="" />
+                </div>
+                <div>
+                    <select class="mx-3" name="genre" id="" v-model="vmodel" @change="callFilteredApi">
+                        <option value="">All</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Pop">Pop</option>
+                        <option value="Metal">Metal</option>
+                        <option value="Jazz">Jazz</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- Container -->
             <div class="container-custom my-4">
 
                 <div class="d-flex flex-wrap text-center">
@@ -43,8 +54,9 @@
                 </div>
 
             </div>
-        </div>
-    </main>
+
+        </main>
+    </div>
 
     <script src="./js/script.js"></script>
 
