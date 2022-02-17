@@ -29,8 +29,9 @@ main .single-album {
   border: 1px solid transparent;
   width: 170px;
   height: 320px;
-  background-color: $bg-dark-color;
-  width: calc(100% / 5);
+  background-color: #2a2c42;
+  width: calc(100% / 5 - 30px);
+  margin: 20px 15px;
 }
 
 main .single-album:hover {
@@ -38,5 +39,5 @@ main .single-album:hover {
 }
 
 main img {
-  width: 130px;
+  width: 100px;
 }
