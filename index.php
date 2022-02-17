@@ -27,6 +27,7 @@ Attraverso un’altra chiamata api, filtrare gli album per genere
     <title>Php Ajax Dischi Fabrizio Fornone</title>
 </head>
 <body>
+    <h1>test</h1>
     
 </body>
 </html>
